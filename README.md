@@ -1,10 +1,25 @@
-I started by loading the CSV file and examining the data. The dataset had numerous missing values, which needed to be addressed. To understand how to handle these missing values, I plotted them and discovered that the missing values were not confined to third-world countries as initially suspected.
+Global Sustainability Exploration
 
-I then checked the data types to facilitate future filtering. Columns with excessive missing values were removed, as there was little I could do to fill these gaps meaningfully. For some columns, especially the "Density" column, I converted values to integers and handled zero values to compute a meaningful mean. I used the transform function to replace missing values with the mean for each country.
+This project involves data cleaning, preprocessing, and visualization to explore global sustainability trends. The dataset, containing various metrics related to CO2 emissions, energy consumption, and GDP, was analyzed to provide insights into global sustainability.
+Overview
 
-Some columns had no values at all, making it impossible to replace them with the mean, so I dropped those columns. Despite these challenges, a decent number of samples remained.
+    Data Examination:
+        Loaded the CSV file and examined the dataset for missing values.
+        Plotted missing values to determine their distribution, revealing that missing values were not limited to third-world countries as initially suspected.
 
-Next, I created a "Continent" column using the pycountry library for future visualization in Power BI. Lastly, I plotted the correlation matrix using Spearman correlation because not all data appeared to be normally distributed, and I renamed some columns to improve their appearance on the plot.
+    Data Cleaning:
+        Checked and filtered data types for future analysis.
+        Removed columns with excessive missing values where meaningful imputation wasn't possible.
+        Converted the "Density" column to integers and handled zero values to compute a meaningful mean.
+        Used the transform function to replace missing values with the mean for each country.
+        Dropped columns with no values.
+
+    Enhancements:
+        Created a "Continent" column using the pycountry library for improved visualization in Power BI.
+
+    Visualizations:
+        Generated a correlation matrix using Spearman correlation to account for non-normally distributed data.
+        Renamed columns for better plot readability.
 
 Data cleaning and preparation were performed using Python, and most visualizations were created in Power BI. Raw Python file with comments and Power BI Report are available via the following links:
 
